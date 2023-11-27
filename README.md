@@ -1,6 +1,12 @@
+<div>
+<img src="https://github.com/mage-ai/assets/blob/main/mascots/mascots-shorter.jpeg?raw=true">
+</div>
+
 ## Data Engineering Zoomcamp - Week 2
 
-Welcome to Mage! Mage is an open-source, hybrid framework for transforming and integrating data. ✨
+Welcome to DE Zoomcamp with Mage! 
+
+Mage is an open-source, hybrid framework for transforming and integrating data. ✨
 
 In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
 
