@@ -1,9 +1,82 @@
-## 🤔 What is it?
+<div>
+<img src="https://github.com/mage-ai/assets/blob/main/mascots/mascots-shorter.jpeg?raw=true">
+</div>
 
-This is a Docker Compose template for getting started with a new Mage project.
+## Data Engineering Zoomcamp - Week 2
 
-## 🙋‍♂️ Why did you create it?
+Welcome to DE Zoomcamp with Mage! 
 
-We created this template for users to have an easy way to deploy a project using Docker.
+Mage is an open-source, hybrid framework for transforming and integrating data. ✨
 
-Using Docker Compose allows editors to easily add their own images or modify the Mage image to their liking. 
+In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
+
+Here are some other helpful links for your journey:
+
+- [Mage Slack](https://www.mage.ai/chat)
+- [Mage GitHub](https://github.com/mage-ai/mage-ai)
+
+## Let's get started
+
+This repo contains a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/). 
+
+You can start by cloning the repo:
+
+```bash
+git clone https://github.com/mage-ai/mage-zoomcamp.git mage-zoomcamp
+```
+
+Navigate to the repo:
+
+```bash
+cd mage-data-engineering-zoomcamp
+```
+
+Rename `dev.env` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it _will_ contain credentials in the future.
+
+Now, let's build the container
+
+```bash
+docker compose build
+```
+
+Finally, start the Docker container:
+
+```bash
+docker compose up
+```
+
+Now, navigate to http://localhost:6789 in your browser! Voila! You're ready to get started with the course. 
+
+## What just happened?
+
+We just initialized a new mage repository. It will be present in your project under the name `magic-zoomcamp`. If you changed the varable `PROJECT_NAME` in the `.env` file, it will be named whatever you set it to.
+
+This repository should have the following structure:
+
+```
+.
+├── mage_data
+│   └── magic-zoomcamp
+├── magic-zoomcamp
+│   ├── __pycache__
+│   ├── charts
+│   ├── custom
+│   ├── data_exporters
+│   ├── data_loaders
+│   ├── dbt
+│   ├── extensions
+│   ├── interactions
+│   ├── pipelines
+│   ├── scratchpads
+│   ├── transformers
+│   ├── utils
+│   ├── __init__.py
+│   ├── io_config.yaml
+│   ├── metadata.yaml
+│   └── requirements.txt
+├── Dockerfile
+├── README.md
+├── dev.env
+├── docker-compose.yml
+└── requirements.txt
+```
