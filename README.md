@@ -13,7 +13,7 @@ In this module, you'll learn how to use the Mage platform to author and share _m
 Here are some other helpful links for your journey:
 
 - [Mage Slack](https://www.mage.ai/chat)
-- [Mage's GitHub](https://github.com/mage-ai/mage-ai)
+- [Mage GitHub](https://github.com/mage-ai/mage-ai)
 
 ## Let's get started
 
