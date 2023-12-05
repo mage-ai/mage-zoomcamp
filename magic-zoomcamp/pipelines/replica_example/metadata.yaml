@@ -1,0 +1,110 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: grey
+  configuration: {}
+  downstream_blocks:
+  - sequence
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: seed
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: seed
+- all_upstream_blocks_executed: true
+  color: grey
+  configuration: {}
+  downstream_blocks:
+  - replica_1
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: sequence
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - seed
+  uuid: sequence
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: replica_3
+  replicated_block: sequence
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - replica_2
+  uuid: replica_3
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - replica_3
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: replica_2
+  replicated_block: sequence
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - replica_1
+  uuid: replica_2
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - replica_2
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: replica_1
+  replicated_block: sequence
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - sequence
+  uuid: replica_1
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-11-29 19:51:53.304442+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: replica_example
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- advanced_concepts
+type: python
+updated_at: '2023-11-29T19:54:18+00:00'
+uuid: replica_example
+widgets: []

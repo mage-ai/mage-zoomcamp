@@ -1,0 +1,76 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: true
+  downstream_blocks:
+  - dynamic_children
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: generate_blocks
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: generate_blocks
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: false
+    reduce_output: true
+  downstream_blocks:
+  - reduced_output
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: dynamic_children
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - generate_blocks
+  uuid: dynamic_children
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: reduced_output
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - dynamic_children
+  uuid: reduced_output
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-11-29 19:32:55.396379+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: dynamic_block_example
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- advanced_concepts
+type: python
+updated_at: '2023-11-29T19:39:25+00:00'
+uuid: dynamic_block_example
+widgets: []

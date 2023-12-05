@@ -1,0 +1,92 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: null
+  downstream_blocks:
+  - transform_nyc_taxi_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_nyc_taxi_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_nyc_taxi_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: null
+  downstream_blocks:
+  - export_taxi_to_gcp_basic
+  - export_taxi_to_gcp_advanced
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_nyc_taxi_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_nyc_taxi_data
+  uuid: transform_nyc_taxi_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_taxi_to_gcp_basic
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_nyc_taxi_data
+  uuid: export_taxi_to_gcp_basic
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_taxi_to_gcp_advanced
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_nyc_taxi_data
+  uuid: export_taxi_to_gcp_advanced
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-11-28 21:24:42.515462+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: load_to_gcp
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- etl
+type: python
+updated_at: '2023-11-29T17:02:37+00:00'
+uuid: load_to_gcp
+widgets: []
