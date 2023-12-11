@@ -3,18 +3,18 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - sql_taxi_to_bigquery
+  - check_status
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: load_parquet_from_gcs
+  name: left_or_right
   retry_config: null
   status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
-  uuid: load_parquet_from_gcs
+  uuid: left_or_right
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -23,49 +23,41 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: bright druid
+  name: check_status
   retry_config: null
-  status: updated
+  status: failed
   timeout: null
-  type: scratchpad
-  upstream_blocks: []
-  uuid: bright_druid
-- all_upstream_blocks_executed: true
+  type: transformer
+  upstream_blocks:
+  - left_or_right
+  uuid: check_status
+callbacks:
+- all_upstream_blocks_executed: false
   color: null
-  configuration:
-    data_provider: bigquery
-    data_provider_database: ''
-    data_provider_profile: default
-    data_provider_schema: nyc_taxi
-    data_provider_table: yellow_taxi_trips
-    dbt: {}
-    export_write_policy: replace
-    limit: 1000
-    use_raw_sql: false
+  configuration: {}
   downstream_blocks: []
   executor_config: null
   executor_type: local_python
   has_callback: false
-  language: sql
-  name: sql_taxi_to_bigquery
+  language: python
+  name: callback
   retry_config: null
-  status: executed
+  status: not_executed
   timeout: null
-  type: data_exporter
+  type: callback
   upstream_blocks:
-  - load_parquet_from_gcs
-  uuid: sql_taxi_to_bigquery
-callbacks: []
+  - check_status
+  uuid: callback
 concurrency_config: {}
 conditionals: []
-created_at: '2023-11-28 22:48:18.808686+00:00'
+created_at: '2023-12-05 23:59:31.330744+00:00'
 data_integration: null
 description: null
 executor_config: {}
 executor_count: 1
 executor_type: null
 extensions: {}
-name: gcp_to_bigquery
+name: callback_example
 notification_config: {}
 remote_variables_dir: null
 retry_config: {}
@@ -74,9 +66,9 @@ settings:
   triggers: null
 spark_config: {}
 tags:
-- etl
+- advanced_concepts
 type: python
-updated_at: '2023-12-06 19:17:23'
-uuid: gcp_to_bigquery
+updated_at: '2023-12-06 00:04:39'
+uuid: callback_example
 variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []
