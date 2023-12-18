@@ -10,14 +10,9 @@ Mage is an open-source, hybrid framework for transforming and integrating data. 
 
 In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
 
-1. [Get Started](#Let's-get-started)
-2. [Solutions](#Solutions)
-3. [Assistance](#Assistance)
-
-Here are some other helpful links for your journey:
-
-- [Mage Slack](https://www.mage.ai/chat)
-- [Mage GitHub](https://github.com/mage-ai/mage-ai)
+1. [Get Started](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#lets-get-started)
+2. [Solutions](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#solutions)
+3. [Assistance](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#assistance)
 
 ## Let's get started
 
@@ -97,6 +92,7 @@ Running `docker compose up` on the solutions branch will start the container wit
 
 ## Assistance
 
-1. [Mage Docs](https://docs.mage.ai/introduction/overview)
-2. [Mage Slack](https://www.mage.ai/chat)
-3. [DTC Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_2_workflow_orchestration)
+1. [Mage Docs](https://docs.mage.ai/introduction/overview): a good place to understand Mage functionality or concepts.
+2. [Mage Slack](https://www.mage.ai/chat): a good place to ask questions or get help from the Mage team.
+3. [DTC Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_2_workflow_orchestration): a good place to get help from the community on course-specific inquireies.
+4. [Mage GitHub](https://github.com/mage-ai/mage-ai): a good place to open issues or feature requests.
