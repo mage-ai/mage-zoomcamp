@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - sql_taxi_to_bigquery
+  - transform
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -18,18 +18,20 @@ blocks:
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - sql_taxi_to_bigquery
   executor_config: null
   executor_type: local_python
   has_callback: false
   language: python
-  name: bright druid
+  name: transform
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
-  type: scratchpad
-  upstream_blocks: []
-  uuid: bright_druid
+  type: transformer
+  upstream_blocks:
+  - load_parquet_from_gcs
+  uuid: transform
 - all_upstream_blocks_executed: true
   color: null
   configuration:
@@ -49,12 +51,13 @@ blocks:
   language: sql
   name: sql_taxi_to_bigquery
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_exporter
   upstream_blocks:
-  - load_parquet_from_gcs
+  - transform
   uuid: sql_taxi_to_bigquery
+cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals: []
@@ -76,7 +79,7 @@ spark_config: {}
 tags:
 - etl
 type: python
-updated_at: '2023-12-06 19:17:23'
+updated_at: '2023-12-14 21:25:29'
 uuid: gcp_to_bigquery
 variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []

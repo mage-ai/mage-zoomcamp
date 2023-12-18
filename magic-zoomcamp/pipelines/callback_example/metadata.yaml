@@ -25,12 +25,13 @@ blocks:
   language: python
   name: check_status
   retry_config: null
-  status: failed
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - left_or_right
   uuid: check_status
+cache_block_output_in_memory: false
 callbacks:
 - all_upstream_blocks_executed: false
   color: null
@@ -68,7 +69,7 @@ spark_config: {}
 tags:
 - advanced_concepts
 type: python
-updated_at: '2023-12-06 00:04:39'
+updated_at: '2023-12-14T21:48:19+00:00'
 uuid: callback_example
 variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []

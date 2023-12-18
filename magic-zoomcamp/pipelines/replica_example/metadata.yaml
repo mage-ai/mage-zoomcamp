@@ -85,6 +85,7 @@ blocks:
   upstream_blocks:
   - sequence
   uuid: replica_1
+cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals: []
@@ -97,6 +98,7 @@ executor_type: null
 extensions: {}
 name: replica_example
 notification_config: {}
+remote_variables_dir: null
 retry_config: {}
 run_pipeline_in_one_process: false
 settings:
@@ -105,6 +107,7 @@ spark_config: {}
 tags:
 - advanced_concepts
 type: python
-updated_at: '2023-11-29T19:54:18+00:00'
+updated_at: '2023-12-14 21:57:28'
 uuid: replica_example
+variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []

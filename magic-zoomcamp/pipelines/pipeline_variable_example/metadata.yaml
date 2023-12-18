@@ -10,12 +10,12 @@ blocks:
   language: python
   name: dummy_data
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: dummy_data
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -88,6 +88,7 @@ blocks:
   upstream_blocks:
   - do_that
   uuid: whats_the_weather
+cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals:
@@ -141,7 +142,7 @@ spark_config: {}
 tags:
 - advanced_concepts
 type: python
-updated_at: '2023-12-05 19:54:44'
+updated_at: '2023-12-14 21:54:53'
 uuid: pipeline_variable_example
 variables:
   weather: sunny

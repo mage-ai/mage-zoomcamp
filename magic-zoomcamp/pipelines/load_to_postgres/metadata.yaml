@@ -48,6 +48,7 @@ blocks:
   upstream_blocks:
   - transform_nyc_taxi_data
   uuid: export_nyc_taxi_data
+cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
 conditionals: []
@@ -67,7 +68,7 @@ settings:
   triggers: null
 spark_config: {}
 tags:
-- into
+- etl
 type: python
 updated_at: '2023-12-05T18:36:29+00:00'
 uuid: load_to_postgres

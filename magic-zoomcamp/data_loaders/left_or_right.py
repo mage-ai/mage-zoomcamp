@@ -6,4 +6,4 @@ if 'test' not in globals():
 
 @data_loader
 def load_data(*args, **kwargs):
-    return {'status': False}
+    return {'status': True}
