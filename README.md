@@ -10,6 +10,10 @@ Mage is an open-source, hybrid framework for transforming and integrating data. 
 
 In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
 
+1. [Get Started](#Let's-get-started)
+2. [Solutions](#Solutions)
+3. [Assistance](#Assistance)
+
 Here are some other helpful links for your journey:
 
 - [Mage Slack](https://www.mage.ai/chat)
@@ -47,7 +51,7 @@ docker compose up
 
 Now, navigate to http://localhost:6789 in your browser! Voila! You're ready to get started with the course. 
 
-## What just happened?
+### What just happened?
 
 We just initialized a new mage repository. It will be present in your project under the name `magic-zoomcamp`. If you changed the varable `PROJECT_NAME` in the `.env` file, it will be named whatever you set it to.
 
@@ -80,3 +84,19 @@ This repository should have the following structure:
 ├── docker-compose.yml
 └── requirements.txt
 ```
+
+## Solutions
+
+If you're looking for the solutions, you can take a look at the `solutions` branch of this repo. 
+
+```bash
+git checkout solutions
+```
+
+Running `docker compose up` on the solutions branch will start the container with the solutions loaded. _Note: this will overwrite the files in your local repo. Be sure to commit your files to a separate branch if you'd like to save your work._
+
+## Assistance
+
+1. [Mage Docs](https://docs.mage.ai/introduction/overview)
+2. [Mage Slack](https://www.mage.ai/chat)
+3. [DTC Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_2_workflow_orchestration)
