@@ -6,10 +6,10 @@ if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
 
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/festive-bazaar-342412-e92a22553dac.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/verdant-current-393218-c0e87b0ec239.json"
 
 bucket_name = 'mage-zoomcamp-mattpalmer'
-project_id = 'festive-bazaar-342412'
+project_id = 'verdant-current-393218'
 
 table_name = 'nyc_taxi'
 

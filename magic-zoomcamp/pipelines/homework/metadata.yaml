@@ -20,6 +20,7 @@ blocks:
   configuration: {}
   downstream_blocks:
   - export_to_postgres
+  - write_to_gcp
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -42,12 +43,28 @@ blocks:
   language: python
   name: export_to_postgres
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_exporter
   upstream_blocks:
   - clean_phone
   uuid: export_to_postgres
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: write_to_gcp
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - clean_phone
+  uuid: write_to_gcp
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -70,7 +87,7 @@ spark_config: {}
 tags:
 - homework
 type: python
-updated_at: '2023-12-18 22:11:13'
+updated_at: '2023-12-18 22:34:58'
 uuid: homework
 variables_dir: /home/src/mage_data/magic-zoomcamp
 widgets: []
