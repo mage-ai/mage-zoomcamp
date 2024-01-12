@@ -10,9 +10,8 @@ Mage is an open-source, hybrid framework for transforming and integrating data. 
 
 In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
 
-1. [Get Started](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#lets-get-started)
-2. [Solutions](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#solutions)
-3. [Assistance](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#assistance)
+[Get Started](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#lets-get-started)
+[Assistance](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#assistance)
 
 ## Let's get started
 
