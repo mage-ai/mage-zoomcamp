@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   magic:
     image: mageai/mageai:latest
@@ -10,6 +10,7 @@ services:
       dockerfile: Dockerfile
     environment:
       USER_CODE_PATH: /home/src/${PROJECT_NAME}
+      ENV: ${ENV}
       POSTGRES_DBNAME: ${POSTGRES_DBNAME}
       POSTGRES_SCHEMA: ${POSTGRES_SCHEMA}
       POSTGRES_USER: ${POSTGRES_USER}
