@@ -80,16 +80,6 @@ This repository should have the following structure:
 └── requirements.txt
 ```
 
-## Solutions
-
-If you're looking for the solutions, you can take a look at the `solutions` branch of this repo. 
-
-```bash
-git checkout solutions
-```
-
-Running `docker compose up` on the solutions branch will start the container with the solutions loaded. _Note: this will overwrite the files in your local repo. Be sure to commit your files to a separate branch if you'd like to save your work._
-
 ## Assistance
 
 1. [Mage Docs](https://docs.mage.ai/introduction/overview): a good place to understand Mage functionality or concepts.
