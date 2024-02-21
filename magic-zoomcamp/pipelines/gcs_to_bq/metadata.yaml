@@ -43,6 +43,9 @@ blocks:
     disable_query_preprocessing: false
     export_write_policy: append
     limit: 1000
+    upstream_block_configuration:
+      standardise_columns:
+        table_name: ''
     use_raw_sql: false
   downstream_blocks: []
   executor_config: null
